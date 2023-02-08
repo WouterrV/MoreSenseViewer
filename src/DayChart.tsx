@@ -159,6 +159,7 @@ const DayChart = ({ perDayData }: { perDayData: Record<string, string>[] }) => {
 
     // Typescript doesn't like our options-object with multiple y-axes
     // but they do work, and are according to the docs: https://www.chartjs.org/docs/latest/samples/line/multi-axis.html
+    // @ts-ignore
     return <Line options={options} data={data} />
 }
 
