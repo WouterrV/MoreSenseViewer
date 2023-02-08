@@ -64,6 +64,8 @@ export default function FileLoader({
             setColumns(columns)
             setData(parsedData)
         }
+        // runs just fine locally but gives message in deployment: index-258fbe58.js:64 Uncaught (in promise) TypeError: Failed to execute 'readAsText' on 'FileReader': parameter 1 is not of type 'Blob'.
+        // @ts-ignore
         reader.readAsText(file)
     }
 
