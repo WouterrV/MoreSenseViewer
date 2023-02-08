@@ -1,5 +1,7 @@
 ![Screenshot of the log viewer](./public/log%20viewer%20screenshot.png)
 
+live at https://wouterrv.github.io/MoreSenseViewer/
+
 # MoreSenseViewer
 
 View sensor data from .csv log files as graphs!
