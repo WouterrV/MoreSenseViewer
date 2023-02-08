@@ -57,7 +57,7 @@ export default function FileLoader({
             if (!result) return null
 
             // @ts-ignore
-            const csv = Papa.parse(target, { header: true })
+            const csv = Papa.parse(result, { header: true })
             // @ts-ignore
             const parsedData = csv.data
             const columns = Object.keys(parsedData[0])
