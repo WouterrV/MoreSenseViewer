@@ -125,7 +125,7 @@ const DayChart = ({ perDayData }: { perDayData: Record<string, string>[] }) => {
                 {
                     label: 'Temperature',
                     data: perDayData.map((entry) =>
-                        parseFloat(entry['Degrees Celcius']),
+                        parseFloat(entry['Degrees Celsius'] || entry['Degrees Celcius']),
                     ),
                     backgroundColor: tailwindColors.red[500],
                     yAxisID: 'temperature',
