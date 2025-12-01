@@ -111,7 +111,20 @@ export default function App() {
                 >
                     {'←'}
                 </button>
-                {selectedDay} of {dataPerDay.length}
+                {/* Hard to make an <input> scale automatically: https://css-tricks.com/auto-growing-inputs-textareas/ */}
+                {/* But a fixed width works just fine for 1 or 2 digits */}
+                <input
+                    className="bg-transparent w-5 inline text-right"
+                    // this only adds +- signs, doesn't restrict user input to numbers, so not useful
+                    // type="number"
+                    value={selectedDay}
+                    onChange={(e) => {
+                        const newDay = parseInt(e.target.value)
+                        setSelectedDay(newDay)
+                    }}
+                />
+                {/* w-5 to match width of <input>, so the design is symmetrical */}
+                of <span className="w-5">{dataPerDay.length}</span>
                 <button
                     className={`${tailwindClasses.button}`}
                     onClick={() => {
